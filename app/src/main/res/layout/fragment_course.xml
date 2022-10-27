@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_course"
+    android:theme="@style/Theme.Design.Light.NoActionBar"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_home"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:toolbarId="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:id="@+id/ic_show_nav"
+                    style="@style/style_img_show_nav"
+                    android:src="@drawable/ic_menu_nav_2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                   />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mali"
+                        android:gravity="left"
+                        android:text="Các khóa học lập \ntrình mới nhất"
+                        android:textColor="@color/white"
+                        android:textSize="23dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="8dp"
+                        />
+                    <ImageView
+                        android:id="@+id/imgFraTop"
+                        android:layout_width="170dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_item_course"
+                      android:layout_gravity="end"
+                        />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:background="@drawable/custom_search_view_2"
+                    android:elevation="5dp"
+                    app:iconifiedByDefault="false"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="20dp"
+                    app:queryBackground="@null"
+                    app:queryHint="Tìm kiếm"
+                    app:submitBackground="@null" />
+                <fragment
+                    android:id="@+id/fragment_slide"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:name="vn.edu.poly.mob201_assignment.FRAGMENTS.FragmentSlideImage"
+                  />
+            </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:isScrollContainer="true"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="2dp"
+                >
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabBackground="@android:color/transparent"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabIndicatorAnimationMode="elastic"
+                    app:tabMode="fixed"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/tab_color"
+                    app:tabTextAppearance="@style/text_tab_layout"
+                    />
+            </androidx.cardview.widget.CardView>
+            <androidx.fragment.app.FragmentContainerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fragment_container"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

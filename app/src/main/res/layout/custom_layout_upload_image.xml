@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:padding="10dp"
+    android:layout_marginHorizontal="30dp"
+    android:background="@drawable/custom_bg_dialog_upload_img">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm hình ảnh"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:fontFamily="@font/mali"
+        android:textColor="@color/black"
+       />
+    <LinearLayout
+        android:id="@+id/imgCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_camera"/>
+        <TextView
+            android:id="@+id/add_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Máy ảnh"
+            android:textSize="20dp"
+            android:fontFamily="@font/itim"
+            android:textColor="#636161"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/imgGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_photo"/>
+        <TextView
+            android:id="@+id/chooser_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Thư viện"
+            android:textSize="20dp"
+            android:fontFamily="@font/itim"
+            android:textColor="#636161"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

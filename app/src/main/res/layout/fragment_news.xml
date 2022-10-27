@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_frag_news">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_frag_news"
+
+        android:scaleType="centerInside"
+        android:rotation="-30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.045"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ic_show_nav"
+                style="@style/style_img_show_nav"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_menu_nav"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Tin tức mới nhất"
+            android:gravity="center"
+            android:fontFamily="@font/mali"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:shadowColor="#AFA8A8"
+            android:shadowDy="2"
+            android:shadowDx="2"
+            android:shadowRadius="5"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật từng ngày"
+            android:gravity="center"
+            android:fontFamily="@font/alata"
+            android:textSize="16dp"
+            android:textColor="@color/gray_2"
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+        <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:background="@drawable/custom_border_view_news"
+             android:elevation="20dp"
+            android:layout_marginTop="20dp"
+             >
+             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                 android:layout_marginTop="20dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/swiperRefreshLayout"
+                 >
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:id="@+id/listRss"
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:layout_weight="1"
+                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                     android:orientation="vertical"
+                     android:paddingHorizontal="10dp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintVertical_bias="0.0" />
+             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+         </LinearLayout>
+    </LinearLayout>
+
+
+    <com.example.loadinganimation.LoadingAnimation
+        android:id="@+id/loadingAnim"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:barType="@drawable/hour_glass"
+        app:boldText="false"
+        app:enlarge="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

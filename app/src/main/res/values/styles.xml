@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_nav" >
+        <item name="android:fontFamily">@font/alegreya</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_color_nav</item>
+    </style>
+
+    <style name="style_img_show_nav">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height" >28dp</item>
+        <item name="android:elevation" >5dp</item>
+        <item name="android:scaleType" >fitCenter</item>
+        <item name="android:background" >@drawable/custom_border_nav_icon</item>
+    </style>
+
+    <style name="text_tab_layout" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/mali</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#121212</item>
+    </style>
+    <style name="style_img_dialog_change_color">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+
+    <style name="style_img_dialog_change_color_2">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/ic_check_course</item>
+    </style>
+    <style name="style_text_dialog_change_color">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">9</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/mali</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="style_card_view_dialog_change_color">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginStart">25dp</item>
+    </style>
+
+    <style name="style_card_view_dialog_change_color_2">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+</resources>

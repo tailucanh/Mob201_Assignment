@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_container_social"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:layout_gravity="top"
+        >
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|start"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:fontFamily="@font/alata"
+            android:text="Tạo bài viết"
+            android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Chia sẻ"
+                android:fontFamily="@font/alata"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:elevation="5dp"
+                android:background="@drawable/custom_button_social"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="10dp"
+                />
+    </androidx.appcompat.widget.Toolbar>
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fitsSystemWindows="true"
+       android:fillViewport="true"
+      >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:paddingTop="?attr/actionBarSize"
+           android:orientation="vertical"
+           android:gravity="top"
+         >
+           <EditText
+               android:id="@+id/edContentShare"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingHorizontal="15dp"
+               android:layout_marginTop="15dp"
+               android:background="@android:color/transparent"
+               android:fontFamily="@font/spinnaker"
+               android:hint="Bạn đang nghĩ gì ? "
+               android:textColor="@color/black"
+               android:textColorHint="@color/gray"
+               android:textSize="22dp"
+               android:lineHeight="22sp"
+              />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_show_img"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible">
+                <EditText
+                    android:id="@+id/edContentImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/alata"
+                    android:hint="Hãy nói gì đó về bức ảnh này... "
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="18dp"
+                    android:lineHeight="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="450dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edContentImg"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_close"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="@id/imgShare"
+                    app:layout_constraintEnd_toEndOf="@+id/imgShare"
+                    app:layout_constraintHorizontal_bias="0.97"
+                    app:layout_constraintVertical_bias="0."
+                    app:layout_constraintStart_toStartOf="@id/imgShare"
+                    app:layout_constraintTop_toTopOf="@+id/imgShare" />
+
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_bg_fun_img"
+                        android:gravity="center"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/imgShare"
+                        app:layout_constraintEnd_toEndOf="@id/imgShare"
+                        app:layout_constraintHorizontal_bias="0.02"
+                        app:layout_constraintStart_toStartOf="@id/imgShare"
+                        app:layout_constraintTop_toTopOf="@id/imgShare"
+                        app:layout_constraintVertical_bias="0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:fontFamily="@font/dongle"
+                            android:text="Aa"
+                            android:gravity="top"
+                            android:textColor="@color/white"
+                            android:textSize="30dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alata"
+                            android:paddingHorizontal="5dp"
+                            android:text="Chỉnh sửa"
+                            android:textStyle="bold"
+
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_bg_fun_img"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/imgShare"
+                        app:layout_constraintEnd_toEndOf="@id/imgShare"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintStart_toEndOf="@+id/layout1"
+                        app:layout_constraintTop_toTopOf="@id/imgShare"
+                        app:layout_constraintVertical_bias="0">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_effect"
+                            android:textColor="@color/white"
+
+                           />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alata"
+                            android:paddingHorizontal="5dp"
+                            android:text="Hiệu ứng"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </LinearLayout>
+   </ScrollView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_bottom_social"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:gravity="center"
+            android:elevation="5dp"
+
+        >
+            <ImageView
+                android:id="@+id/icSetting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_setting_social" />
+            <ImageView
+                android:id="@+id/icChooserColor"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="left|center"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_color_palette" />
+            <ImageView
+                android:id="@+id/icAddImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_add_img" />
+
+            <TextView
+                android:id="@+id/tv_time_social"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:textSize="14dp"
+                android:text="Thời gian"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

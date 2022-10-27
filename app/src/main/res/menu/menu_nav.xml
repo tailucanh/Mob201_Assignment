@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/ic_home"
+        android:title="Trang chủ"
+        android:icon="@drawable/ic_nav_home"
+        />
+    <item
+        android:id="@+id/ic_course"
+        android:title="Khóa học"
+        android:icon="@drawable/ic_nav_course"
+        />
+
+    <item
+        android:id="@+id/ic_news"
+        android:title="Tin tức"
+        android:icon="@drawable/ic_nav_newspaper"/>
+    <item
+        android:id="@+id/ic_social"
+        android:icon="@drawable/ic_nav_internet"
+        android:title="Chia sẻ"/>
+    <item
+        android:id="@+id/ic_gg_maps"
+        android:icon="@drawable/ic_nav_maps"
+        android:title="Vị trí trực tiếp"/>
+
+
+
+
+</menu>
